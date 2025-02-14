@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Consolas', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.topbar {
+    background: linear-gradient(to right, #670331, #200463); /* Degradê verde */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Mantém a foto à esquerda e os links à direita */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-sizing: border-box; /* Evita que padding afete o tamanho total */
+}
+
+/* Estilização da imagem */
+.topbar img {
+    height: 50px; /* Define um tamanho fixo */
+    width: 50px; /* Mantém a imagem proporcional */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+
+/* Ajuste do menu para evitar que os links saiam da tela */
+.nav-links {
+    display: flex;
+    gap: 10px; /* Reduzindo o espaço entre os links */
+    flex-wrap: wrap; /* Quebra a linha caso fique muito grande */
+}
+
+/* Estilização dos links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 5px 10px; /* Melhor espaçamento */
+    white-space: nowrap; /* Evita que quebre palavras */
+}
+
+.nav-links a:hover {
+    color: #d4ffd4; /* Um verde mais claro ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .topbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+.textoprincipal {
+    background: linear-gradient(to right, #670331, #200463); /* Degradê */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Cor do texto */
+    font-size: 1.4rem;
+    padding: 20px; /* Espaço interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: fit-content; /* Ajusta ao tamanho do conteúdo */
+    min-height: fit-content; /* Evita esticar a altura */
+    margin: auto; /* Centraliza horizontalmente */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Faz a div ocupar a tela toda */
+}
